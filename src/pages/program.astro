@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProgramCard from '../components/ProgramCard.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<BaseLayout title="Program" description="Program unggulan LAZISWAF Universitas Darussalam Gontor" currentPath="/program">
+  <section class="page-header">
+    <h1 class="animate-fade-in-up">Program LAZISWAF</h1>
+    <p>Beragam program penghimpunan dan penyaluran dana ZISWAF yang berdampak</p>
+  </section>
+
+  <!-- Penghimpunan -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center scroll-reveal">
+        <h2 class="section-title">Program Penghimpunan</h2>
+        <p class="section-subtitle" style="margin: 0.75rem auto 0;">
+          Berbagai cara untuk menunaikan zakat, infak, sedekah, dan wakaf melalui LAZISWAF.
+        </p>
+      </div>
+      <div class="grid-3" style="margin-top: 3rem;">
+        <ProgramCard
+          icon="🤲"
+          title="Zakat"
+          description="Salurkan zakat fitrah dan zakat mal Anda melalui LAZISWAF. Kami pastikan penyaluran tepat sasaran kepada 8 golongan mustahik."
+          features={['Zakat Fitrah', 'Zakat Mal/Profesi', 'Zakat Emas & Perak']}
+        />
+        <ProgramCard
+          icon="💝"
+          title="Infak & Sedekah"
+          description="Setiap infak dan sedekah yang Anda berikan akan disalurkan untuk program-program pemberdayaan umat."
+          features={['Infak Harian', 'Sedekah Subuh', 'Donasi Program']}
+        />
+        <ProgramCard
+          icon="📖"
+          title="Wakaf"
+          description="Wakafkan harta Anda untuk program wakaf produktif dan wakaf Al-Qur'an yang pahalanya terus mengalir."
+          features={['Wakaf Al-Quran', 'Wakaf Kitab Turos', 'Wakaf Produktif']}
+        />
+        <ProgramCard
+          icon="🐑"
+          title="Qurban"
+          description="Fasilitasi ibadah qurban Idul Adha dengan pilihan kambing dan domba terbaik."
+          features={['Cicil Qurban', 'Pilihan Hewan', 'Penyaluran Tepat']}
+        />
+        <ProgramCard
+          icon="🏠"
+          title="Daur Jabi"
+          description="Program door-to-door jemput donasi rutin dari Bapak/Ibu Dosen dan karyawan UNIDA Gontor."
+          features={['Rutin Bulanan', 'Akad Jelas', 'Laporan Transparan']}
+        />
+        <ProgramCard
+          icon="🌅"
+          title="Sedekah Subuh"
+          description="Momentum istimewa bersedekah di waktu fajar saat malaikat turun mendoakan."
+          features={['Setiap Subuh', 'Berapa pun nominalnya', 'Konsistensi kebaikan']}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Penyaluran -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="text-center scroll-reveal">
+        <h2 class="section-title">Program Penyaluran</h2>
+        <p class="section-subtitle" style="margin: 0.75rem auto 0;">
+          Program-program pemberdayaan dan bantuan yang didanai dari dana ZISWAF.
+        </p>
+      </div>
+      <div class="grid-3" style="margin-top: 3rem;">
+        <ProgramCard
+          icon="🎓"
+          title="Beasiswa Minhati"
+          description="Beasiswa pendidikan bagi mahasiswa/i dan santri/wati UNIDA Gontor yang membutuhkan dukungan finansial maupun berprestasi."
+          features={['Batch 44', 'Jalur Bantuan Pendidikan', 'Jalur Prestasi']}
+        />
+        <ProgramCard
+          icon="🤝"
+          title="Bantuan Kemanusiaan"
+          description="Bantuan logistik, sembako, dan kebutuhan pokok untuk korban bencana alam dan masyarakat terdampak."
+          features={['Bencana Sumatera 2026', 'Distribusi Langsung', 'Sinergi Relawan']}
+        />
+        <ProgramCard
+          icon="📚"
+          title="Wakaf Al-Qur'an & Kitab"
+          description="Penyaluran mushaf Al-Qur'an dan kitab turos ke lembaga pendidikan, masjid, dan pesantren."
+          features={['50 Mushaf ke SMPN', 'Wakaf Kitab Turos', 'Amal Jariyah']}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Rekening -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center scroll-reveal">
+        <h2 class="section-title">Salurkan Donasi</h2>
+        <p class="section-subtitle" style="margin: 0.75rem auto 2rem;">
+          Salurkan zakat, infak, sedekah, dan wakaf Anda melalui rekening resmi LAZISWAF UNIDA Gontor.
+        </p>
+      </div>
+      <div class="rekening-grid scroll-reveal">
+        <div class="rekening-card">
+          <div class="rekening-bank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="8" x2="22" y2="8"/>
+            </svg>
+            Bank Syariah Indonesia
+          </div>
+          <div class="rekening-number">1010 63 2297</div>
+          <div class="rekening-name">a.n. LAZISWAF UNIDA Gontor</div>
+        </div>
+        <div class="rekening-card">
+          <div class="rekening-bank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            Info & Konfirmasi
+          </div>
+          <div class="rekening-number">0851-5966-7366</div>
+          <div class="rekening-name">Konfirmasi donasi & informasi program</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Jadilah Bagian dari Kebaikan"
+    subtitle="Bersama LAZISWAF UNIDA Gontor, wujudkan pendidikan yang lebih baik dan raih keberkahan."
+    ctaText="Hubungi Kami Sekarang"
+    ctaHref="/kontak"
+    variant="gold"
+  />
+</BaseLayout>
+
+<style>
+  .rekening-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .rekening-card {
+    padding: 2rem;
+    background: var(--bg-card);
+    border: 2px solid var(--border-light);
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .rekening-card:hover {
+    border-color: var(--green-300);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+  }
+
+  .rekening-bank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--green-700);
+    margin-bottom: 1rem;
+  }
+
+  .rekening-bank svg {
+    color: var(--gold-500);
+  }
+
+  .rekening-number {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--green-600), var(--green-800));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+
+  .rekening-name {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .rekening-grid {
+      grid-template-columns: 1fr;
+    }
+    .rekening-number {
+      font-size: var(--text-2xl);
+    }
+  }
+</style>

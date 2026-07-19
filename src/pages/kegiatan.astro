@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import KegiatanCard from '../components/KegiatanCard.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<BaseLayout title="Kegiatan" description="Dokumentasi kegiatan LAZISWAF Universitas Darussalam Gontor" currentPath="/kegiatan">
+  <section class="page-header">
+    <h1 class="animate-fade-in-up">Kegiatan & Berita</h1>
+    <p>Dokumentasi kegiatan penyaluran dan penghimpunan dana LAZISWAF UNIDA Gontor</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="kegiatan-highlight card scroll-reveal">
+        <div class="kegiatan-highlight-image">
+          <img src="/images/donasi-sumatera.jpg" alt="Distribusi Donasi Sumatera" />
+        </div>
+        <div class="kegiatan-highlight-content">
+          <div class="highlight-badge">Berita Utama</div>
+          <h2>Penyaluran Bantuan Kemanusiaan untuk Korban Bencana di Sumatera</h2>
+          <p>Tim LAZISWAF UNIDA Gontor bergerak langsung ke lokasi bencana di Aceh dan Sumatera, dipimpin oleh Al-Ustadz Sunan Autad Sarjana, Lc., M.H. selaku Direktur Penyaluran. Bantuan disalurkan dengan sinergi relawan dari PMDG Kampus 8 dan IKPM Cabang Aceh, menyisir wilayah Pidie Jaya, Bireun, Bener Meriah, hingga pelosok Takengon.</p>
+          <div class="highlight-meta">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Februari 2026
+            </span>
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Aceh & Sumatera
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top: 4rem;">Kegiatan Lainnya</h2>
+      <div class="grid-3" style="margin-top: 2rem;">
+        <KegiatanCard
+          image="/images/wakaf-quran-50-mushaf.jpg"
+          alt="Penyaluran 50 Mushaf Wakaf"
+          title="Penyaluran 50 Mushaf Wakaf Al-Qur'an ke SMPN 1 Slahung"
+          date="Mei 2026"
+          description="Penyaluran amanah 50 mushaf wakaf Al-Qur'an untuk kegiatan keagamaan siswa-siswi di SMPN 1 Slahung, Ponorogo."
+        />
+        <KegiatanCard
+          image="/images/pelantikan-pengurus.jpg"
+          alt="Pelantikan Pengurus LAZISWAF"
+          title="Pelantikan Pengurus LAZISWAF Periode 1447-1448 H"
+          date="2025/2026"
+          description="Serah terima jabatan pengurus baru LAZISWAF UNIDA Gontor untuk melanjutkan program-program ZISWAF."
+        />
+        <KegiatanCard
+          image="/images/sosialisasi-ziswaf.jpg"
+          alt="Sosialisasi ZISWAF"
+          title="Sosialisasi dan Edukasi ZISWAF di Lingkungan Kampus"
+          date="Desember 2024"
+          description="Memberikan pemahaman kepada mahasiswa dan mahasiswi tentang pentingnya zakat, infak, sedekah, dan wakaf."
+        />
+        <KegiatanCard
+          image="/images/bantuan-aceh.jpg"
+          alt="Bantuan Aceh"
+          title="Penyaluran Bantuan untuk Korban Bencana Takengon Aceh"
+          date="Februari 2026"
+          description="Bantuan kemanusiaan untuk korban bencana alam di Takengon, Aceh. Tim turun langsung ke lokasi."
+        />
+        <KegiatanCard
+          image="/images/doortodoor-laziswaf.jpg"
+          alt="Door to Door LAZISWAF"
+          title="Program Daur Jabi — Jemput Donasi Door-to-Door"
+          date="Rutin"
+          description="Penghimpunan donasi rutin dari Bapak/Ibu Dosen dan karyawan UNIDA Gontor secara door-to-door dengan akad jelas."
+        />
+        <KegiatanCard
+          image="/images/sedekah-shubuh.jpg"
+          alt="Sedekah Subuh"
+          title="Gerakan Sedekah Subuh LAZISWAF UNIDA Gontor"
+          date="Rutin"
+          description="Mengajak seluruh civitas akademika untuk bersedekah di waktu subuh yang penuh keberkahan."
+        />
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    title="Ingin Berkontribusi?"
+    subtitle="Setiap bentuk partisipasi Anda sangat berarti untuk kelangsungan program-program kemanusiaan dan pendidikan."
+    ctaText="Salurkan Donasi"
+    ctaHref="/kontak"
+    variant="gold"
+  />
+</BaseLayout>
+
+<style>
+  .kegiatan-highlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+  }
+
+  .kegiatan-highlight-image {
+    height: 100%;
+    min-height: 350px;
+    overflow: hidden;
+  }
+
+  .kegiatan-highlight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s;
+  }
+
+  .kegiatan-highlight:hover .kegiatan-highlight-image img {
+    transform: scale(1.05);
+  }
+
+  .kegiatan-highlight-content {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .highlight-badge {
+    display: inline-flex;
+    padding: 0.3rem 0.75rem;
+    background: var(--gold-500);
+    color: var(--green-900);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    border-radius: 100px;
+    width: fit-content;
+    letter-spacing: 0.5px;
+  }
+
+  .kegiatan-highlight-content h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    color: var(--green-800);
+    line-height: 1.3;
+  }
+
+  .kegiatan-highlight-content p {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  .highlight-meta {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .highlight-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+  }
+
+  .highlight-meta svg {
+    color: var(--green-500);
+  }
+
+  @media (max-width: 768px) {
+    .kegiatan-highlight {
+      grid-template-columns: 1fr;
+    }
+
+    .kegiatan-highlight-image {
+      min-height: 220px;
+    }
+
+    .kegiatan-highlight-content h2 {
+      font-size: var(--text-xl);
+    }
+  }
+</style>

@@ -1,0 +1,113 @@
+---
+// ProgramCard.astro — Card program unggulan
+export interface Props {
+  icon: string;
+  title: string;
+  description: string;
+  features: string[];
+}
+
+const { icon, title, description, features } = Astro.props;
+---
+
+<article class="program-card card scroll-reveal">
+  <div class="card-icon-wrap">
+    <span class="program-icon">{icon}</span>
+  </div>
+  <h3 class="card-title">{title}</h3>
+  <p class="card-desc">{description}</p>
+  <ul class="card-features">
+    {features.map(f => (
+      <li>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        {f}
+      </li>
+    ))}
+  </ul>
+</article>
+
+<style>
+  .program-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .program-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--green-500), var(--gold-500));
+    border-radius: 16px 16px 0 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .program-card:hover::before {
+    opacity: 1;
+  }
+
+  .card-icon-wrap {
+    width: 56px;
+    height: 56px;
+    background: var(--green-50);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .program-icon {
+    font-size: 1.75rem;
+  }
+
+  .card-title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--green-800);
+  }
+
+  .card-desc {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  .card-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+  }
+
+  .card-features li svg {
+    color: var(--green-500);
+    flex-shrink: 0;
+  }
+
+  .program-card:hover .card-icon-wrap {
+    background: var(--green-600);
+  }
+
+  .program-card:hover .program-icon {
+    filter: brightness(10);
+  }
+</style>

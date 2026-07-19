@@ -1,0 +1,367 @@
+/* ===== LAZISWAF UNIDA Gontor — Global Styles ===== */
+/* Theme: Islamic Emerald — profesional, hangat, terpercaya */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* === Brand Colors === */
+  --green-900: #0d2818;
+  --green-800: #0d5c2e;
+  --green-700: #0a7c3c;
+  --green-600: #059669;
+  --green-500: #10b981;
+  --green-400: #34d399;
+  --green-300: #6ee7b7;
+  --green-200: #a7f3d0;
+  --green-100: #d1fae5;
+  --green-50:  #ecfdf5;
+
+  --gold-500: #d4a843;
+  --gold-400: #e0b95a;
+  --gold-300: #ebce7a;
+  --gold-600: #b8922e;
+
+  --cream:    #f5f0e8;
+  --cream-50: #faf8f3;
+  --white:    #ffffff;
+
+  --text-primary: #0d2818;
+  --text-secondary: #2d5a3e;
+  --text-muted: #6b8f7c;
+  --text-on-dark: #ecfdf5;
+
+  --bg-primary: var(--cream-50);
+  --bg-card: var(--white);
+  --bg-dark: var(--green-900);
+  --bg-section-alt: var(--green-50);
+
+  --border-light: #e2e8f0;
+  --border-accent: var(--green-200);
+
+  /* === Shadows === */
+  --shadow-sm: 0 1px 3px rgba(13, 40, 24, 0.06), 0 1px 2px rgba(13, 40, 24, 0.04);
+  --shadow-md: 0 4px 12px rgba(13, 40, 24, 0.08);
+  --shadow-lg: 0 10px 30px rgba(13, 40, 24, 0.1);
+  --shadow-xl: 0 20px 50px rgba(13, 40, 24, 0.12);
+  --shadow-glow: 0 0 20px rgba(5, 150, 105, 0.15);
+
+  /* === Typography === */
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-arabic: 'Amiri', 'Traditional Arabic', serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+}
+
+/* === Reset & Base === */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--green-600);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--green-700);
+}
+
+/* === Container === */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* === Typography Classes === */
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--green-800);
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green-600), var(--gold-500));
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center .section-title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Section === */
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background: var(--bg-section-alt);
+}
+
+/* === Buttons === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--green-600), var(--green-700));
+  color: white;
+  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(5, 150, 105, 0.4);
+  color: white;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+  color: var(--green-900);
+  box-shadow: 0 4px 15px rgba(212, 168, 67, 0.3);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 168, 67, 0.4);
+  color: var(--green-900);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--green-600);
+  border: 2px solid var(--green-600);
+}
+.btn-outline:hover {
+  background: var(--green-600);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  background: white;
+  color: var(--green-700);
+}
+.btn-white:hover {
+  background: var(--green-50);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-sm {
+  padding: 0.6rem 1.25rem;
+  font-size: var(--text-xs);
+  border-radius: 8px;
+}
+
+/* === Card Base === */
+.card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border-light);
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* === Grid === */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Scroll animation classes */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal-delay-1 { transition-delay: 0.1s; }
+.scroll-reveal-delay-2 { transition-delay: 0.2s; }
+.scroll-reveal-delay-3 { transition-delay: 0.3s; }
+.scroll-reveal-delay-4 { transition-delay: 0.4s; }
+
+/* === Page Header === */
+.page-header {
+  background: linear-gradient(135deg, var(--green-900), var(--green-800));
+  padding: 8rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.1;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 800;
+  color: white;
+  position: relative;
+}
+
+.page-header p {
+  color: var(--green-200);
+  font-size: var(--text-lg);
+  margin-top: 0.75rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section-title {
+    font-size: var(--text-2xl);
+  }
+
+  .page-header {
+    padding: 6rem 0 3rem;
+  }
+
+  .page-header h1 {
+    font-size: var(--text-3xl);
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: var(--text-2xl);
+  }
+}

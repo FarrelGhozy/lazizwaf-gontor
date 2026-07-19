@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import StatsSection from '../components/StatsSection.astro';
+import ProgramCard from '../components/ProgramCard.astro';
+import KegiatanCard from '../components/KegiatanCard.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<BaseLayout currentPath="/">
+  <!-- Hero -->
+  <Hero
+    title="Lembaga Amil Zakat, Infak, Sedekah & Wakaf"
+    subtitle="Menghimpun dan menyalurkan dana ZISWAF secara profesional, amanah, dan transparan di lingkungan Universitas Darussalam Gontor."
+    primaryCta={{ text: 'Salurkan Donasi', href: '/kontak' }}
+    secondaryCta={{ text: 'Lihat Program', href: '/program' }}
+  />
+
+  <!-- Stats -->
+  <StatsSection />
+
+  <!-- Program Unggulan -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="text-center scroll-reveal">
+        <h2 class="section-title">Program Unggulan Kami</h2>
+        <p class="section-subtitle" style="margin: 0.75rem auto 0;">
+          Program-program LAZISWAF yang telah berjalan dan memberikan dampak nyata bagi masyarakat.
+        </p>
+      </div>
+      <div class="grid-3" style="margin-top: 3rem;">
+        <ProgramCard
+          icon="🎓"
+          title="Beasiswa Minhati"
+          description="Beasiswa pendidikan untuk mahasiswa/i dan santri/wati aktif UNIDA Gontor dari keluarga kurang mampu serta jalur prestasi."
+          features={['Batch 44 sudah dibuka', 'Jalur Bantuan Pendidikan', 'Jalur Prestasi Akademik']}
+        />
+        <ProgramCard
+          icon="📖"
+          title="Wakaf Al-Qur'an"
+          description="Penyaluran mushaf Al-Qur'an wakaf ke lembaga pendidikan dan masjid. Setiap huruf menjadi pahala jariyah bagi wakif."
+          features={['50 mushaf ke SMPN 1 Slahung', 'Penyaluran rutin', 'Amal jariyah']}
+        />
+        <ProgramCard
+          icon="🤝"
+          title="Bantuan Kemanusiaan"
+          description="Penyaluran bantuan logistik dan donasi untuk korban bencana alam di berbagai wilayah Indonesia."
+          features={['Aceh & Sumatera 2026', 'Distribusi tepat sasaran', 'Sinergi dengan relawan']}
+        />
+        <ProgramCard
+          icon="🏠"
+          title="Daur Jabi"
+          description="Program door-to-door jemput donasi dari Bapak/Ibu Dosen dan karyawan di lingkungan UNIDA Gontor secara rutin."
+          features={['Jemput donasi rutin', 'Transparansi akad', 'Silaturahmi berkelanjutan']}
+        />
+        <ProgramCard
+          icon="🌅"
+          title="Sedekah Subuh"
+          description="Program sedekah di waktu subuh yang istimewa, saat para malaikat turun mendoakan hamba yang berinfak."
+          features={['Awali hari dengan berkah', 'Konsistensi kebaikan', 'Ketenangan batin']}
+        />
+        <ProgramCard
+          icon="🕌"
+          title="Qurban"
+          description="Fasilitasi ibadah Qurban Idul Adha dengan kambing dan domba terbaik di lingkungan UNIDA Gontor."
+          features={['Pilihan hewan qurban', 'Harga terjangkau', 'Penyaluran tepat sasaran']}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Kegiatan Terbaru -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center scroll-reveal">
+        <h2 class="section-title">Kegiatan Terbaru</h2>
+        <p class="section-subtitle" style="margin: 0.75rem auto 0;">
+          Dokumentasi kegiatan penyaluran dan penghimpunan dana LAZISWAF UNIDA Gontor.
+        </p>
+      </div>
+      <div class="grid-3" style="margin-top: 3rem;">
+        <KegiatanCard
+          image="/images/wakaf-quran-50-mushaf.jpg"
+          alt="Penyaluran 50 Mushaf Wakaf Al-Qur'an"
+          title="Penyaluran 50 Mushaf Wakaf Al-Qur'an ke SMPN 1 Slahung"
+          date="Mei 2026"
+          description="LAZISWAF telah menyalurkan amanah 50 mushaf wakaf Al-Qur'an untuk mendukung kegiatan keagamaan siswa-siswi di SMPN 1 Slahung."
+        />
+        <KegiatanCard
+          image="/images/pelantikan-pengurus.jpg"
+          alt="Pelantikan Pengurus LAZISWAF 1447 H"
+          title="Pelantikan Pengurus LAZISWAF Periode 1447-1448 H"
+          date="2025/2026"
+          description="Serah terima jabatan dan pelantikan pengurus baru LAZISWAF UNIDA Gontor untuk periode 1447-1448 H."
+        />
+        <KegiatanCard
+          image="/images/bantuan-aceh.jpg"
+          alt="Bantuan Kemanusiaan Aceh"
+          title="Penyaluran Bantuan untuk Korban Bencana Takengon Aceh"
+          date="Februari 2026"
+          description="Tim LAZISWAF bergerak langsung ke lokasi, bersinergi dengan relawan PMDG Kampus 8 dan IKPM Aceh."
+        />
+        <KegiatanCard
+          image="/images/donasi-sumatera.jpg"
+          alt="Donasi Sumatera"
+          title="Distribusi Donasi untuk Wilayah Terdampak di Sumatera"
+          date="Februari 2026"
+          description="Penyaluran bantuan menyisir wilayah Pidie Jaya, Bireun, Bener Meriah, hingga pelosok Takengon."
+        />
+        <KegiatanCard
+          image="/images/sosialisasi-ziswaf.jpg"
+          alt="Sosialisasi ZISWAF"
+          title="Sosialisasi ZISWAF di Lingkungan Kampus"
+          date="Desember 2024"
+          description="Edukasi kepada mahasiswa dan mahasiswi tentang pentingnya zakat, infak, sedekah, dan wakaf."
+        />
+        <KegiatanCard
+          image="/images/doortodoor-laziswaf.jpg"
+          alt="Door to Door LAZISWAF"
+          title="Layanan Door-to-Door Penghimpunan Donasi"
+          date="Rutin"
+          description="Program Daur Jabi — jemput donasi langsung dari asrama dan lingkungan kampus dengan akad jelas."
+        />
+      </div>
+      <div class="text-center" style="margin-top: 3rem;">
+        <a href="/kegiatan" class="btn btn-outline">Lihat Semua Kegiatan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CTASection
+    title="Mari Berpartisipasi dalam Kebaikan"
+    subtitle="Setiap rupiah yang Anda sisihkan akan menjadi investasi akhirat yang tak terputus pahalanya. Salurkan zakat, infak, sedekah, dan wakaf terbaik Anda melalui LAZISWAF UNIDA Gontor."
+    ctaText="Hubungi Kami"
+    ctaHref="/kontak"
+  />
+</BaseLayout>

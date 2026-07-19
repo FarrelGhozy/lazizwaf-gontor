@@ -1,0 +1,56 @@
+---
+// BaseLayout.astro — Layout utama untuk semua halaman
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  currentPath?: string;
+}
+
+const { title = 'LAZISWAF UNIDA Gontor', description = 'Lembaga Amil Zakat, Infak, Sedekah, dan Wakaf Universitas Darussalam Gontor', currentPath = '/' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | LAZISWAF UNIDA Gontor</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0d5c2e" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={`${title} | LAZISWAF UNIDA Gontor`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <!-- Scroll Reveal Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+      });
+    </script>
+  </head>
+  <body>
+    <Navbar currentPath={currentPath} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
