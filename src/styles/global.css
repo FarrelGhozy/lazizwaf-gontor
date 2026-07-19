@@ -1,7 +1,7 @@
 /* ===== LAZISWAF UNIDA Gontor — Global Styles ===== */
 /* Theme: Islamic Emerald — profesional, hangat, terpercaya */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap');
 
 :root {
   /* === Brand Colors === */
@@ -46,7 +46,7 @@
   --shadow-glow: 0 0 20px rgba(5, 150, 105, 0.15);
 
   /* === Typography === */
-  --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-display: 'Sora', system-ui, -apple-system, sans-serif;
   --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
   --font-arabic: 'Amiri', 'Traditional Arabic', serif;
 
